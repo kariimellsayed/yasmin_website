@@ -1,6 +1,6 @@
 import "./globals.css"
 import Footer from "./components/Footer";
-import Navbar from "./components/Navbar.tsx";
+import Navbar from "./components/Navbar";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";

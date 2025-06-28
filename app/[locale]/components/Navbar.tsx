@@ -8,9 +8,14 @@ import Image from "next/image";
 import SwitchButtonLang from "./SwitchButtonLang";
 import {
   FiHome, FiBox, FiMail, FiActivity, FiShield, FiHelpCircle,
-  FiUser, FiMenu, FiX, FiSearch, FiShoppingCart, FiInstagram,
-  FiGift, FiChevronDown
+  FiUser, FiSearch, FiShoppingCart, FiInstagram,
+  FiGift
 } from "react-icons/fi";
+
+
+
+
+
 
 export default function Navbar() {
   const pathName = usePathname();
@@ -26,9 +31,10 @@ export default function Navbar() {
   }, [pathName]);
 
   useEffect(() => {
+    if (!searchTerm) return;
     const timeout = setTimeout(() => {
       const query = searchTerm.trim();
-      const basePath = `/${locale}/Products`;
+      const basePath = `/${locale}/products`;
       const finalURL = query ? `${basePath}?search=${encodeURIComponent(query)}` : basePath;
       router.push(finalURL);
     }, 400);
@@ -40,8 +46,8 @@ export default function Navbar() {
       title: "general",
       items: [
         { key: "home", path: "/", icon: <FiHome size={20} />, activeIcon: <FiHome size={20} className="text-white" /> },
-        { key: "products", path: "/Products", icon: <FiBox size={20} />, activeIcon: <FiBox size={20} className="text-white" /> },
-        { key: "contact", path: "/Contact", icon: <FiMail size={20} />, activeIcon: <FiMail size={20} className="text-white" /> }
+        { key: "products", path: "/products", icon: <FiBox size={20} />, activeIcon: <FiBox size={20} className="text-white" /> },
+        { key: "contact", path: "/contact", icon: <FiMail size={20} />, activeIcon: <FiMail size={20} className="text-white" /> }
       ]
     },
     {
@@ -102,30 +108,70 @@ export default function Navbar() {
 
   return (
     <header>
-      <p className="flex justify-center items-center gap-2.5 p-2.5 bg-[#FE93B9] text-[#393939] text-[15px] max-[767px]:text-[13px]">
+      <p className="flex justify-center items-center gap-2.5 p-2.5 px-20 bg-[#FE93B9] text-[#393939] text-[15px] max-[767px]:text-[13px]">
         <FiGift size={20} />
         Only this month 20% discount on all services
         <FiGift size={20} />
       </p>
 
-      <nav className="w-full h-15">
+      <nav className="w-full min-h-1.5">
         <div className="bg-[#f5f5f5]">
           <div className="custom__container">
-            <ul className="flex items-center justify-between gap-4 w-full px-4 py-2 relative">
+            <ul className="flex items-center justify-between gap-4 w-full py-3 relative">
 
               {/* Menu toggle button */}
               <li className="relative z-50">
                 {toggle && (
-                  <span className="absolute -bottom-[35px] left-1/2 w-10 -translate-x-1/2">
-                    <FiChevronDown size={40} className="text-[#FE93B9]" />
+                  <span className="absolute -bottom-[35px] left-1/2 -translate-x-1/2">
+                      <svg
+                      className="w-12"
+                       xmlns="http://www.w3.org/2000/svg"
+                       width="80"
+                       height="64"
+                       viewBox="0 0 80 64"
+                       fill="none"
+                     >
+                       <path
+                         d="M40 64L0.162827 0.25L79.8372 0.25L40 64Z"
+                         fill="#FE93B9"
+                       />
+                     </svg>
                   </span>
                 )}
                 <button onClick={() => setToggle(!toggle)} className="cursor-pointer">
-                  {toggle ? <FiX size={30} className="text-[#393939]" /> : <FiMenu size={30} className="text-[#393939]" />}
+                    <svg
+                     className="w-10"
+                     xmlns="http://www.w3.org/2000/svg"
+                     width="60"
+                     height="60"
+                     viewBox="0 0 60 60"
+                     fill="none"
+                   >
+                     <path
+                       d="M52.5 13.125H35C33.975 13.125 33.125 12.275 33.125 11.25C33.125 10.225 33.975 9.375 35 9.375H52.5C53.525 9.375 54.375 10.225 54.375 11.25C54.375 12.275 53.525 13.125 52.5 13.125Z"
+                       fill="#393939"
+                     />
+                     <path
+                       d="M52.5 25.625H35C33.975 25.625 33.125 24.775 33.125 23.75C33.125 22.725 33.975 21.875 35 21.875H52.5C53.525 21.875 54.375 22.725 54.375 23.75C54.375 24.775 53.525 25.625 52.5 25.625Z"
+                       fill="#393939"
+                     />
+                     <path
+                       d="M52.5 38.125H7.5C6.475 38.125 5.625 37.275 5.625 36.25C5.625 35.225 6.475 34.375 7.5 34.375H52.5C53.525 34.375 54.375 35.225 54.375 36.25C54.375 37.275 53.525 38.125 52.5 38.125Z"
+                       fill="#393939"
+                     />
+                     <path
+                       d="M52.5 50.625H7.5C6.475 50.625 5.625 49.775 5.625 48.75C5.625 47.725 6.475 46.875 7.5 46.875H52.5C53.525 46.875 54.375 47.725 54.375 48.75C54.375 49.775 53.525 50.625 52.5 50.625Z"
+                       fill="#393939"
+                     />
+                     <path
+                       d="M19.8 26.875H12.7C8.85 26.875 6.875 24.925 6.875 21.05V13.95C6.875 10.1 8.825 8.125 12.7 8.125H19.825C23.675 8.125 25.65 10.075 25.65 13.95V21.075C25.625 24.925 23.675 26.875 19.8 26.875ZM12.7 11.875C10.925 11.875 10.625 12.175 10.625 13.95V21.075C10.625 22.85 10.925 23.15 12.7 23.15H19.825C21.6 23.15 21.9 22.85 21.9 21.075V13.95C21.9 12.175 21.6 11.875 19.825 11.875H12.7Z"
+                       fill="#393939"
+                     />
+                   </svg>
                 </button>
 
                 {toggle && (
-                  <div className="absolute py-4 bg-[#fe93b9] top-[60px] -left-6 rounded-r-[8px] rounded-b-[8px] z-50 w-[270px]">
+                  <div className="absolute py-4 bg-[#fe93b9] top-[79px] -left-6 rounded-r-[8px] rounded-b-[8px] z-50 w-[270px]">
                     <div className="px-9">
                       <Image src="/logo.svg" width={75} height={75} loading="lazy" alt="logo" className="mb-3" />
                     </div>
