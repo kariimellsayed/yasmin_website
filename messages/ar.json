@@ -1,0 +1,126 @@
+{
+  "Navbar": {
+    "general": "عام",
+    "mySpace": "مساحتي",
+    "support": "الدعم",
+    "accountk": "الحساب",
+    "home": "الرئيسية",
+    "products": "المنتجات",
+    "contact": "تواصل",
+    "activity": "النشاط",
+    "privacy": "الخصوصية",
+    "help": "مساعدة",
+    "account": "الحساب"
+  },
+  "Landing": {
+    "title": "مرحبًا بكم في متجرنا الإلكتروني",
+    "description": "اكتشف أفضل المنتجات بأسعار لا تقارن.",
+    "shopNow": "تسوق الآن",
+    "featuredProducts": "المنتجات المميزة",
+    "viewAll": "عرض الكل",
+    "categories": "الفئات",
+    "aboutUs": "من نحن",
+    "contactUs": "اتصل بنا",
+    "bestSeller": "الأكثر مبيعًا"
+  },
+  "ProductPage": {
+    "addToCart": "أضف إلى السلة",
+    "buyNow": "اشتري الآن",
+    "productDetails": "تفاصيل المنتج",
+    "reviews": "المراجعات",
+    "relatedProducts": "منتجات ذات صلة"
+  },
+  "CartPage": {
+    "title": "سلتك",
+    "emptyCart": "سلتك فارغة.",
+    "continueShopping": "متابعة التسوق",
+    "checkout": "الدفع",
+    "total": "المجموع",
+    "removeItem": "إزالة العنصر"
+  },
+  "CheckoutPage": {
+    "title": "الدفع",
+    "billingDetails": "تفاصيل الفوترة",
+    "shippingDetails": "تفاصيل الشحن",
+    "paymentMethod": "طريقة الدفع",
+    "placeOrder": "إتمام الطلب",
+    "orderSummary": "ملخص الطلب"
+  },
+  "LoginPage": {
+    "title": "تسجيل الدخول",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "rememberMe": "تذكرني",
+    "forgotPassword": "نسيت كلمة المرور؟",
+    "loginButton": "تسجيل الدخول",
+    "noAccount": "ليس لديك حساب؟",
+    "registerHere": "سجل هنا"
+  },
+  "RegisterPage": {
+    "title": "تسجيل",
+    "name": "الاسم",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "registerButton": "تسجيل",
+    "alreadyHaveAccount": "هل لديك حساب بالفعل؟",
+    "loginHere": "تسجيل الدخول هنا"
+  },
+  "ProfilePage": {
+    "title": "ملفي الشخصي",
+    "editProfile": "تعديل الملف",
+    "orderHistory": "سجل الطلبات",
+    "wishlist": "قائمة الرغبات",
+    "logout": "تسجيل الخروج"
+  },
+  "SupportPage": {
+    "title": "الدعم",
+    "faq": "الأسئلة الشائعة",
+    "contactSupport": "تواصل مع الدعم",
+    "submitTicket": "إرسال تذكرة",
+    "liveChat": "الدردشة المباشرة"
+  },
+  "PrivacyPage": {
+    "title": "سياسة الخصوصية",
+    "description": "خصوصيتك تهمنا. اقرأ سياستنا لمعرفة كيف نحمي بياناتك."
+  },
+  "ContactPage": {
+    "title": "تواصل معنا",
+    "description": "لأي استفسار أو مساعدة، فريق ياسمين مجدي جاهز دائمًا لخدمتك.",
+    "form": {
+      "name": "اسمك",
+      "email": "البريد الإلكتروني",
+      "subject": "الموضوع",
+      "message": "رسالتك",
+      "submit": "إرسال",
+      "placeholder": {
+        "name": "الاسم",
+        "email": "example@gmail.com",
+        "subject": "الموضوع",
+        "message": "مرحبًا! أود الاستفسار عن..."
+      },
+  "breadcrumb": {
+    "home": "الرئيسية",
+    "contact": "تواصل معنا"
+  }
+
+    },
+    "info": {
+      "title": "معلومات الاتصال",
+      "text": "نحن متاحون لأي استفسار.",
+      "phone": "الهاتف",
+      "email": "البريد الإلكتروني",
+      "hours": "ساعات العمل",
+      "weekdays": "الإثنين - الجمعة",
+      "weekend": "السبت - الأحد"
+    }
+  },
+  "Footer": {
+    "aboutUs": "عن المتجر",
+    "contactUs": "اتصل بنا",
+    "privacyPolicy": "سياسة الخصوصية",
+    "termsOfService": "شروط الخدمة",
+    "followUs": "تابعنا",
+    "subscribeNewsletter": "اشترك في النشرة الإخبارية"
+  }
+}

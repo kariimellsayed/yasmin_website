@@ -1,0 +1,127 @@
+{
+  "Navbar": {
+    "general": "General",
+    "mySpace": "My Space",
+    "support": "Support",
+    "accountk": "Account",
+    "home": "Home",
+    "products": "Products",
+    "contact": "Contact",
+    "activity": "Activity",
+    "privacy": "Privacy",
+    "help": "Help",
+    "account": "Account"
+  },
+  "Landing": {
+    "title": "Welcome to Our E-commerce Store",
+    "description": "Discover the best products at unbeatable prices.",
+    "shopNow": "Shop Now",
+    "featuredProducts": "Featured Products",
+    "viewAll": "View All",
+    "categories": "Categories",
+    "aboutUs": "About Us",
+    "contactUs": "Contact Us",
+    "bestSeller": "Best Seller"
+  },
+  "ProductPage": {
+    "addToCart": "Add to Cart",
+    "buyNow": "Buy Now",
+    "productDetails": "Product Details",
+    "reviews": "Reviews",
+    "relatedProducts": "Related Products"
+  },
+  "CartPage": {
+    "title": "Your Cart",
+    "emptyCart": "Your cart is empty.",
+    "continueShopping": "Continue Shopping",
+    "checkout": "Checkout",
+    "total": "Total",
+    "removeItem": "Remove Item"
+  },
+  "CheckoutPage": {
+    "title": "Checkout",
+    "billingDetails": "Billing Details",
+    "shippingDetails": "Shipping Details",
+    "paymentMethod": "Payment Method",
+    "placeOrder": "Place Order",
+    "orderSummary": "Order Summary"
+  },
+  "LoginPage": {
+    "title": "Login",
+    "email": "Email",
+    "password": "Password",
+    "rememberMe": "Remember Me",
+    "forgotPassword": "Forgot Password?",
+    "loginButton": "Login",
+    "noAccount": "Don't have an account?",
+    "registerHere": "Register here"
+  },
+  "RegisterPage": {
+    "title": "Register",
+    "name": "Name",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "registerButton": "Register",
+    "alreadyHaveAccount": "Already have an account?",
+    "loginHere": "Login here"
+  },
+  "ProfilePage": {
+    "title": "My Profile",
+    "editProfile": "Edit Profile",
+    "orderHistory": "Order History",
+    "wishlist": "Wishlist",
+    "logout": "Logout"
+  },
+  "SupportPage": {
+    "title": "Support",
+    "faq": "FAQ",
+    "contactSupport": "Contact Support",
+    "submitTicket": "Submit a Ticket",
+    "liveChat": "Live Chat"
+  },
+  "PrivacyPage": {
+    "title": "Privacy Policy",
+    "description": "Your privacy is important to us. Read our policy to learn how we protect your data."
+  },
+  "ContactPage": {
+    "title": "Contact Us",
+    "description": "For any inquiries or assistance, the Yasmin Magdy team is always ready to help you.",
+    "form": {
+      "name": "Your name",
+      "email": "Email address",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Submit",
+      "placeholder": {
+        "name": "Name",
+        "email": "example@gmail.com",
+        "subject": "Subject",
+        "message": "Hi! I'd like to ask about..."
+      },
+        "breadcrumb": {
+    "home": "Home",
+    "contact": "Contact Us"
+  }
+    },
+    "info": {
+      "title": "Contact Information",
+      "text": "We’re available for all your questions.",
+      "phone": "Mobile",
+      "email": "E-mail",
+      "hours": "Working Hours",
+      "weekdays": "Monday - Friday",
+      "weekend": "Saturday - Sunday"
+    }
+  },
+  "Footer": {
+    "aboutUs": "About the Store",
+    "contactUs": "Contact Us",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "followUs": "Follow Us",
+    "subscribeNewsletter": "Subscribe to Newsletter"
+  }
+
+
+}
