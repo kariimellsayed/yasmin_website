@@ -26,9 +26,6 @@
     "loadingMore": "Loading more...",
     "sale": "Sale",
     "addToCart": "Add to Cart"
-
-    
-
   },
   "ProductPage": {
     "title": "Product Details",
@@ -43,6 +40,7 @@
   },
   "CartPage": {
     "title": "Your Cart",
+    "home": "Home",
     "emptyCart": "Your cart is empty.",
     "continueShopping": "Continue Shopping",
     "checkout": "Checkout",
@@ -137,5 +135,17 @@
     "termsOfService": "Terms of Service",
     "followUs": "Follow Us",
     "subscribeNewsletter": "Subscribe to Newsletter"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "products": "Products",
+    "productDetails": "Product Details",
+    "cart": "Cart",
+    "checkout": "Checkout",
+    "contact": "Contact Us",
+    "support": "Support",
+    "profile": "Profile",
+    "login": "Login",
+    "register": "Register"
   }
 }

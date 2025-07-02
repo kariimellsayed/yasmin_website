@@ -1,6 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import ResultCart from "../components/ResultCart.jsx"
+import ResultCart from "../components/ResultCart";
+import { useLocale, useTranslations } from "next-intl";
+import { motion } from "framer-motion";
 
 type Product = {
   id: number;
@@ -9,11 +13,11 @@ type Product = {
   color: string;
   price: number;
   quantity: number;
-}
+};
 
 type CartProps = {
-    Products: Product[]
-}
+  Products: Product[];
+};
 
 const cartProducts: Product[] = [
   {
@@ -21,15 +25,15 @@ const cartProducts: Product[] = [
     title: "Lip gloss",
     size: "Large",
     color: "white",
-    price: 320.00,
+    price: 320.0,
     quantity: 1,
   },
-    {
+  {
     id: 2,
     title: "Lip gloss",
     size: "Medium",
     color: "Red",
-    price: 320.00,
+    price: 320.0,
     quantity: 1,
   },
   {
@@ -37,29 +41,43 @@ const cartProducts: Product[] = [
     title: "Lip gloss",
     size: "Large",
     color: "Blue",
-    price: 320.00,
+    price: 320.0,
     quantity: 1,
   },
-
-]
-
+];
 
 export default function Cart() {
-    return (
-      <section className="py-16">
-        <div className="custom__container">
-          <div className='flex items-center gap-2 mb-8 text-[#393939] lg:text-lg mr-auto md:pl-9 text-sm'>
-           <Link  href={"/"} className='text-[#868686]'>Home</Link>
-           <Image
-           src={"/arrow-right.svg"}
-           alt="Arrow Right"
-           width={24}
-           height={24}
-           />
-             <div className='font-semibold'>Cart</div>
-           </div>
-        <ResultCart cartProducts={cartProducts}/>
-        </div>
-      </section>
-    )
+  const locale = useLocale();
+  const t = useTranslations("CartPage");
+
+  return (
+    <motion.section
+      className="py-16"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.4 }}
+    >
+      <div className="custom__container">
+        <motion.div
+          className="flex items-center gap-2 mb-8 text-[#393939] lg:text-lg mr-auto md:pl-9 text-sm"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Link href={`/${locale}`} className="text-[#868686]">
+            {t("home") || "home"}
+          </Link>
+          <Image
+            src={"/arrow-right.svg"}
+            alt="Arrow Right"
+            width={24}
+            height={24}
+          />
+          <div className="font-semibold">{t("title") || "Cart"}</div>
+        </motion.div>
+
+        <ResultCart cartProducts={cartProducts} />
+      </div>
+    </motion.section>
+  );
 }

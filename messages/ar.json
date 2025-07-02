@@ -26,10 +26,8 @@
     "loadingMore": "جارٍ تحميل المزيد...",
     "sale": "خصم",
     "addToCart": "أضف إلى السلة"
-
   },
   "ProductPage": {
-
     "title": "تفاصيل المنتج",
     "addToCart": "أضف إلى السلة",
     "buyNow": "اشتري الآن",
@@ -42,6 +40,7 @@
   },
   "CartPage": {
     "title": "سلتك",
+    "home": "الرئيسية",
     "emptyCart": "سلتك فارغة.",
     "continueShopping": "متابعة التسوق",
     "checkout": "الدفع",
