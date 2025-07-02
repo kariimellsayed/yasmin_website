@@ -13,10 +13,10 @@ export default function ContactPage() {
   const t = useTranslations("ContactPage");
 
   return (
-    <section className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <section className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 transition-all duration-300">
       {/* ✅ Breadcrumb */}
       <div className="flex items-center gap-2 mb-8 text-[#393939] text-sm md:text-base">
-        <Link href="/" className="text-[#868686] hover:underline">
+        <Link href="/" className="text-[#868686] hover:underline transition-all">
           {t("breadcrumb.home")}
         </Link>
         <Image src="/arrow-right.svg" alt="Arrow Right" width={20} height={20} />
@@ -24,13 +24,13 @@ export default function ContactPage() {
       </div>
 
       {/* ✅ Heading */}
-      <h1 className="text-3xl font-bold text-center mb-4">{t("title")}</h1>
-      <p className="text-center text-gray-600 mb-10">{t("description")}</p>
+      <h1 className="text-3xl font-bold text-center mb-4 animate-fade-in">{t("title")}</h1>
+      <p className="text-center text-gray-600 mb-10 animate-fade-in delay-100">{t("description")}</p>
 
       {/* ✅ Layout */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* ✅ Info Box */}
-        <div className="relative p-6 rounded-md bg-[#fe93b9] text-[#393939] overflow-hidden flex flex-col justify-between min-h-[500px]">
+        <div className="relative p-6 rounded-md bg-[#fe93b9] text-[#393939] overflow-hidden flex flex-col justify-between min-h-[500px] shadow-md hover:shadow-lg transition-all">
           <Image
             src="/552b44a24fba9af49142ba9f5800bf941ef1ec2a.png"
             alt="Decoration"
@@ -68,42 +68,38 @@ export default function ContactPage() {
 
           {/* ✅ Social Icons */}
           <div className="flex gap-3 mt-6 z-10">
-            <div className="w-8 h-8 rounded-full bg-[#393939] flex items-center justify-center">
+            <a href="#" className="w-8 h-8 rounded-full bg-[#393939] flex items-center justify-center hover:scale-110 transition-all">
               <FaFacebookF size={16} className="text-[#FE93B9]" />
-            </div>
-            <div className="w-8 h-8 rounded-full bg-[#393939] flex items-center justify-center">
+            </a>
+            <a href="#" className="w-8 h-8 rounded-full bg-[#393939] flex items-center justify-center hover:scale-110 transition-all">
               <FiInstagram size={16} className="text-[#FE93B9]" />
-            </div>
+            </a>
           </div>
         </div>
 
         {/* ✅ Form */}
-        <form className="space-y-5 p-4 sm:p-6 md:p-8 bg-white rounded-lg shadow">
-          {[
-            {
-              label: t("form.name"),
-              type: "text",
-              placeholder: t("form.placeholder.name"),
-            },
-            {
-              label: t("form.email"),
-              type: "email",
-              placeholder: t("form.placeholder.email"),
-            },
-            {
-              label: t("form.subject"),
-              type: "text",
-              placeholder: t("form.placeholder.subject"),
-            },
-          ].map((field, index) => (
-            <div key={index}>
+        <form className="space-y-5 p-4 sm:p-6 md:p-8 bg-white rounded-lg shadow hover:shadow-md transition-all">
+          {[{
+            label: t("form.name"),
+            type: "text",
+            placeholder: t("form.placeholder.name"),
+          }, {
+            label: t("form.email"),
+            type: "email",
+            placeholder: t("form.placeholder.email"),
+          }, {
+            label: t("form.subject"),
+            type: "text",
+            placeholder: t("form.placeholder.subject"),
+          }].map((field, index) => (
+            <div key={index} className="transition-all">
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 {field.label}
               </label>
               <input
                 type={field.type}
                 placeholder={field.placeholder}
-                className="w-full px-3 py-2 border-b-2 border-r-2 border-gray-300 bg-white text-gray-800 rounded shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-[#FE93B9]"
+                className="w-full px-3 py-2 border-b-2 border-r-2 border-gray-300 bg-white text-gray-800 rounded shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-[#FE93B9] focus:border-[#FE93B9] transition"
               />
             </div>
           ))}
@@ -115,13 +111,13 @@ export default function ContactPage() {
             <textarea
               rows={4}
               placeholder={t("form.placeholder.message")}
-              className="w-full px-3 py-2 border-b-2 border-r-2 border-gray-300 bg-white text-gray-800 rounded shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-[#FE93B9]"
+              className="w-full px-3 py-2 border-b-2 border-r-2 border-gray-300 bg-white text-gray-800 rounded shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-[#FE93B9] focus:border-[#FE93B9] transition"
             />
           </div>
 
           <button
             type="submit"
-            className="bg-[#FE93B9] hover:bg-[#9A3E63] w-full sm:w-auto px-6 py-2 text-white rounded-full transition"
+            className="bg-[#FE93B9] hover:bg-[#9A3E63] w-full sm:w-auto px-6 py-2 text-white rounded-full transition shadow hover:shadow-md"
           >
             {t("form.submit")}
           </button>

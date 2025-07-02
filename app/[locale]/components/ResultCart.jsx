@@ -145,7 +145,7 @@ export default function ResultCart({cartProducts}) {
               </div>
               <button className="cursor-pointer bg-[#FE93B9] rounded-4xl p-4 h-12 w-28 flex justify-center items-center"> Apply </button>
             </div>
-            <Link href={"cart/checkout"}>
+            <Link href={"Cart/checkout"}>
                         <button className="cursor-pointer bg-[#FE93B9] rounded-4xl p-4 h-16 w-full flex justify-center items-center gap-3.5">Go to Checkout  
               <svg
                xmlns="http://www.w3.org/2000/svg"

@@ -13,7 +13,7 @@
     "account": "Account"
   },
   "Landing": {
-    "title": "Welcome to Our E-commerce Store",
+    "title": "Welcome to Our Online Store",
     "description": "Discover the best products at unbeatable prices.",
     "shopNow": "Shop Now",
     "featuredProducts": "Featured Products",
@@ -21,14 +21,25 @@
     "categories": "Categories",
     "aboutUs": "About Us",
     "contactUs": "Contact Us",
-    "bestSeller": "Best Seller"
+    "bestSeller": "Best Seller",
+    "viewDetails": "View Details",
+    "loadingMore": "Loading more...",
+    "sale": "Sale",
+    "addToCart": "Add to Cart"
+
+    
+
   },
   "ProductPage": {
+    "title": "Product Details",
     "addToCart": "Add to Cart",
     "buyNow": "Buy Now",
     "productDetails": "Product Details",
     "reviews": "Reviews",
-    "relatedProducts": "Related Products"
+    "relatedProducts": "Related Products",
+    "viewDetails": "View Product Details",
+    "wishlist": "Add to Wishlist",
+    "sale": "Sale"
   },
   "CartPage": {
     "title": "Your Cart",
@@ -75,40 +86,45 @@
   },
   "SupportPage": {
     "title": "Support",
-    "faq": "FAQ",
+    "faq": "Frequently Asked Questions",
     "contactSupport": "Contact Support",
-    "submitTicket": "Submit a Ticket",
+    "submitTicket": "Submit Ticket",
     "liveChat": "Live Chat"
   },
   "PrivacyPage": {
     "title": "Privacy Policy",
-    "description": "Your privacy is important to us. Read our policy to learn how we protect your data."
+    "description": "Your privacy matters to us. Read our policy to learn how we protect your data."
   },
   "ContactPage": {
     "title": "Contact Us",
     "description": "For any inquiries or assistance, the Yasmin Magdy team is always ready to help you.",
     "form": {
-      "name": "Your name",
-      "email": "Email address",
+      "name": "Your Name",
+      "email": "Email",
       "subject": "Subject",
-      "message": "Message",
-      "submit": "Submit",
+      "message": "Your Message",
+      "submit": "Send",
+      "viewDetails": "View Product Details",
+      "addToCart": "Add to Cart",
+      "wishlist": "Add to Wishlist",
+      "viewAll": "View All",
+      "sale": "Sale",
       "placeholder": {
         "name": "Name",
         "email": "example@gmail.com",
         "subject": "Subject",
-        "message": "Hi! I'd like to ask about..."
-      },
-        "breadcrumb": {
-    "home": "Home",
-    "contact": "Contact Us"
-  }
+        "message": "Hi! I’d like to inquire about..."
+      }
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "contact": "Contact Us"
     },
     "info": {
       "title": "Contact Information",
-      "text": "We’re available for all your questions.",
-      "phone": "Mobile",
-      "email": "E-mail",
+      "text": "We are available for any inquiry.",
+      "phone": "Phone",
+      "email": "Email",
       "hours": "Working Hours",
       "weekdays": "Monday - Friday",
       "weekend": "Saturday - Sunday"
@@ -122,6 +138,4 @@
     "followUs": "Follow Us",
     "subscribeNewsletter": "Subscribe to Newsletter"
   }
-
-
 }

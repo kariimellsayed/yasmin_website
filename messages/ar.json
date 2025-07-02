@@ -21,14 +21,24 @@
     "categories": "الفئات",
     "aboutUs": "من نحن",
     "contactUs": "اتصل بنا",
-    "bestSeller": "الأكثر مبيعًا"
+    "bestSeller": "الأكثر مبيعًا",
+    "viewDetails": "مشاهدة التفاصيل",
+    "loadingMore": "جارٍ تحميل المزيد...",
+    "sale": "خصم",
+    "addToCart": "أضف إلى السلة"
+
   },
   "ProductPage": {
+
+    "title": "تفاصيل المنتج",
     "addToCart": "أضف إلى السلة",
     "buyNow": "اشتري الآن",
     "productDetails": "تفاصيل المنتج",
     "reviews": "المراجعات",
-    "relatedProducts": "منتجات ذات صلة"
+    "relatedProducts": "منتجات ذات صلة",
+    "viewDetails": "مشاهدة تفاصيل المنتج",
+    "wishlist": "أضف إلى المفضلة",
+    "sale": "خصم"
   },
   "CartPage": {
     "title": "سلتك",
@@ -93,17 +103,21 @@
       "subject": "الموضوع",
       "message": "رسالتك",
       "submit": "إرسال",
+      "viewDetails": "مشاهدة تفاصيل المنتج",
+      "addToCart": "أضف إلى السلة",
+      "wishlist": "أضف إلى المفضلة",
+       "viewAll": "عرض الكل",
+      "sale": "خصم",
       "placeholder": {
         "name": "الاسم",
         "email": "example@gmail.com",
         "subject": "الموضوع",
         "message": "مرحبًا! أود الاستفسار عن..."
-      },
-  "breadcrumb": {
-    "home": "الرئيسية",
-    "contact": "تواصل معنا"
-  }
-
+      }
+    },
+    "breadcrumb": {
+      "home": "الرئيسية",
+      "contact": "تواصل معنا"
     },
     "info": {
       "title": "معلومات الاتصال",

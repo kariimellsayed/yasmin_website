@@ -1,4 +1,6 @@
-import "./globals.css"
+// app/[locale]/layout.tsx
+
+import "./globals.css";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
@@ -8,6 +10,14 @@ import { routing } from "@/i18n/routing";
 
 export const metadata = {
   title: "Home",
+  icons: {
+    icon: [
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/site.webmanifest",
 };
 
 export default async function LocaleLayout({
@@ -23,10 +33,11 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  const messages = await getMessages(); // 🟢 جلب رسائل الترجمة للسيرفر
+  const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    // 👇 اجعل الاتجاه ثابتًا LTR مهما كانت اللغة
+    <html lang={locale} dir="ltr">
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar />

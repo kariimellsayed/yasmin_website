@@ -1,11 +1,11 @@
-import Landing from "./components/Landing"
-import BestSeller from "./components/BestSeller"
+import Landing from "./components/Landing";
+import BestSeller from "./components/BestSeller";
 
 export default function HomePage() {
   return (
-    <div>
+    <main>
       <Landing />
       <BestSeller />
-    </div>
+    </main>
   );
 }
