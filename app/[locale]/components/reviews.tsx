@@ -116,7 +116,7 @@ export default function Reviews() {
         </div>
     </motion.div>
     <motion.section>
-        <BestSeller />
+        <BestSeller value={"details"}/>
     </motion.section>
 </>
   );

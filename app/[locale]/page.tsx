@@ -5,7 +5,7 @@ export default function HomePage() {
   return (
     <main>
       <Landing />
-      <BestSeller />
+      <BestSeller  value={"products"}/>
     </main>
   );
 }

@@ -39,7 +39,7 @@ export default function BestSeller(value = '' as any) {
       <div className="custom__container max-w-7xl mx-auto">
         <div className="flex items-center justify-between mb-12">
        <h2 className="text-3xl font-bold text-gray-900">
-         {value === "details" ? t("bestSeller") : t("bestSellerDetails")}
+         {value === "details" ? t("bestSellerDetails") : t("bestSeller")}
        </h2>
 
         </div>
