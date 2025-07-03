@@ -6,18 +6,42 @@ import { Heart, Star } from "lucide-react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
+// أنواع البيانات
+type Category = {
+  id: number;
+  title: string;
+  image?: string;
+};
+
+type Product = {
+  id: number;
+  name: string;
+  image: string;
+  price: number;
+  originalPrice?: number;
+  rating: number;
+  reviewCount: number;
+  colors: string[];
+  isOnSale?: boolean;
+  category: number;
+  stock: number;
+};
+
+type CartItem = Product & { qty: number };
+type Cart = { [productId: number]: CartItem };
+
 export default function Categories() {
   const t = useTranslations("ContactPage.form");
   const tProd = useTranslations("ProductPage");
   const searchParams = useSearchParams();
-  const search = searchParams.get("search") || "";
-  const [selected, setSelected] = useState(0);
-  const [filteredProducts, setFilteredProducts] = useState([]);
-  const [visibleCount, setVisibleCount] = useState(8);
-  const loaderRef = useRef(null);
-  const [cart, setCart] = useState({});
+  const search = (searchParams.get("search") as string) || "";
+  const [selected, setSelected] = useState<number>(0);
+  const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
+  const [visibleCount, setVisibleCount] = useState<number>(8);
+  const loaderRef = useRef<HTMLDivElement | null>(null);
+  const [cart, setCart] = useState<Cart>({});
 
-  const categories = [
+  const categories: Category[] = [
     { id: 0, title: t("viewAll") },
     { id: 1, title: "Lips", image: "/lips.svg" },
     { id: 2, title: "Eye", image: "/eyeC.svg" },
@@ -26,7 +50,7 @@ export default function Categories() {
     { id: 5, title: "Perfume", image: "/perfume.svg" }
   ];
 
-  const allProducts = [
+  const allProducts: Product[] = [
     { id: 1, name: "Lip Gloss – Dusty Pink", image: "/images/test.png", price: 350, originalPrice: 450, rating: 4.5, reviewCount: 121, colors: ["#8B4B6B"], isOnSale: true, category: 1, stock: 5 },
     { id: 2, name: "Mascara – Black", image: "/images/test.png", price: 220, rating: 4.2, reviewCount: 80, colors: ["#000"], category: 2, stock: 4 },
     { id: 3, name: "Foundation – Light", image: "/images/test.png", price: 400, rating: 4.7, reviewCount: 60, colors: ["#F5E1DA"], category: 3, stock: 3 },
@@ -66,7 +90,7 @@ export default function Categories() {
     };
   }, [filteredProducts]);
 
-  const renderStars = (rating) => {
+  const renderStars = (rating: number) => {
     const fullStars = Math.floor(rating);
     const hasHalf = rating % 1 !== 0;
     const stars = [];
@@ -80,7 +104,7 @@ export default function Categories() {
     return stars;
   };
 
-  const handleAddToCart = (product) => {
+  const handleAddToCart = (product: Product) => {
     setCart((prev) => {
       const currentQty = prev[product.id]?.qty || 0;
       if (currentQty < product.stock) {

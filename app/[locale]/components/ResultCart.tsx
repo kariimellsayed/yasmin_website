@@ -5,8 +5,22 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { useLocale } from "next-intl"; // دعم اللغات
 
-export default function ResultCart({ cartProducts }) {
-  const [carts, setCarts] = useState([]);
+type CartProduct = {
+  id: number;
+  image?: string;
+  title: string;
+  size?: string;
+  color?: string;
+  price: number;
+  quantity?: number;
+};
+
+type ResultCartProps = {
+  cartProducts: CartProduct[];
+};
+
+export default function ResultCart({ cartProducts }: ResultCartProps) {
+  const [carts, setCarts] = useState<CartProduct[]>([]);
   const locale = useLocale();
   const isAr = locale === "ar";
 
@@ -24,7 +38,7 @@ export default function ResultCart({ cartProducts }) {
     setCarts(init);
   }, [init]);
 
-  const subTotal = carts.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  const subTotal = carts.reduce((acc, item) => acc + item.price * (item.quantity ?? 1), 0);
   const discount = subTotal * 0.2;
   const deliveryFee = 60;
   const total = subTotal - discount + deliveryFee;
@@ -71,19 +85,19 @@ export default function ResultCart({ cartProducts }) {
                     onClick={() => setCarts((prev) =>
                       prev.map((ele) =>
                         ele.id === item.id
-                          ? { ...ele, quantity: Math.max(1, ele.quantity - 1) }
+                          ? { ...ele, quantity: Math.max(1, (ele.quantity ?? 1) - 1) }
                           : ele
                       )
                     )}
                   >
                     -
                   </button>
-                  <span className="text-black">{item.quantity}</span>
+                  <span className="text-black">{item.quantity ?? 1}</span>
                   <button className="text-black hover:text-pink-600"
                     onClick={() => setCarts((prev) =>
                       prev.map((ele) =>
                         ele.id === item.id
-                          ? { ...ele, quantity: ele.quantity + 1 }
+                          ? { ...ele, quantity: (ele.quantity ?? 1) + 1 }
                           : ele
                       )
                     )}

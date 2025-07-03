@@ -8,7 +8,7 @@ import {
 
 
 
-export default function CheckoutForms(params) {
+export default function CheckoutForms() {
     const icons = [
         {
             id: 1,

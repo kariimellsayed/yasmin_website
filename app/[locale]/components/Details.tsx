@@ -1,15 +1,27 @@
 "use client"
 
 import Image from "next/image"
-import { useState } from "react"
+import { useState, ReactNode } from "react"
+
+// أنواع البيانات
+type ProductListItem = {
+  id: number;
+  icon: ReactNode;
+  text: string;
+};
+
+type ImageOfProduct = {
+  id: number;
+  img: string;
+};
 
 function Details() {
-    const [isActive, setIsActive] =  useState(1);
-    const [imgeSrc, setImgSrc] =  useState(null);
-    const [rate, setRate] =  useState(4)
-    const [viewToggle, setViewToggle] = useState(true);
+    const [isActive, setIsActive] =  useState<number>(1);
+    const [imgeSrc, setImgSrc] =  useState<string | null>(null);
+    const [rate, setRate] =  useState<number>(4)
+    const [viewToggle, setViewToggle] = useState<boolean>(true);
 
-    const listOfProduct = [
+    const listOfProduct: ProductListItem[] = [
       {
         id: 1,
         icon:         <svg
@@ -26,7 +38,6 @@ function Details() {
   </svg>,
         text: "Receive 2 free samples when you spend 1000 EGP"
       },
-
       {
         id: 2,
         icon:   <svg
@@ -51,7 +62,6 @@ function Details() {
   </svg>,
   text: "Get 30 EGP off when you leave a review"
       },
-
       {
         id: 3,
         icon:   <svg
@@ -68,16 +78,15 @@ function Details() {
   </svg>,
         text: "Free makeup consultation with our experts"
       }
-
     ]
 
-    const colorsData = [
+    const colorsData: string[] = [
         "#9A3E63",
         "#9B5D5E",
         "#A30000",
         "#FFC3E1"
     ]
-    const imagesOfProduct = [
+    const imagesOfProduct: ImageOfProduct[] = [
         {
             id: 1,
             img: "/images/product_1.png",
@@ -88,11 +97,11 @@ function Details() {
         }
     ]
 
-    const handleActiveEvent = (id) => {
+    const handleActiveEvent = (id: number) => {
         setIsActive(id)
     }
 
-    const returnImageSrc = (src) => {
+    const returnImageSrc = (src: string) => {
         setImgSrc(src)
     }
 

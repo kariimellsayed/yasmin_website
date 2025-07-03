@@ -5,14 +5,21 @@ import React from 'react';
 
 
 
-export default function LocaleSwitcher({ currentLocale }) {
+
+type LocaleSwitcherProps = {
+  currentLocale: 'en' | 'ar';
+};  
+
+
+
+export default function LocaleSwitcher({ currentLocale }: LocaleSwitcherProps) {
   const router = useRouter();
   const pathname = usePathname();
 
   const newLocale = currentLocale === 'en' ? 'ar' : 'en';
 
 
-  const getNewPath = (path, locale) => {
+  const getNewPath = (path: string, locale: string) => {
     if (/^\/(en|ar)/.test(path)) {
 
       return path.replace(/^\/(en|ar)/, `/${locale}`);
