@@ -22,10 +22,12 @@
     "aboutUs": "من نحن",
     "contactUs": "اتصل بنا",
     "bestSeller": "الأكثر مبيعًا",
+    "bestSellerDetails": " المنتجات ",
     "viewDetails": "مشاهدة التفاصيل",
     "loadingMore": "جارٍ تحميل المزيد...",
     "sale": "خصم",
-    "addToCart": "أضف إلى السلة"
+    "addToCart": "أضف إلى السلة",
+    "wishlist": "أضف إلى المفضلة"
   },
   "ProductPage": {
     "title": "تفاصيل المنتج",

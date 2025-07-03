@@ -22,10 +22,12 @@
     "aboutUs": "About Us",
     "contactUs": "Contact Us",
     "bestSeller": "Best Seller",
+    "bestSellerDetails": "Products",
     "viewDetails": "View Details",
     "loadingMore": "Loading more...",
     "sale": "Sale",
-    "addToCart": "Add to Cart"
+    "addToCart": "Add to Cart",
+    "wishlist": " Add to Wishlist"
   },
   "ProductPage": {
     "title": "Product Details",

@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import ProductCard from "./ProductCard";
 import { motion } from "framer-motion";
 
-export default function BestSeller() {
+export default function BestSeller(value = '' as any) {
   const t = useTranslations("Landing");
 
   const allProducts = [
@@ -38,9 +38,10 @@ export default function BestSeller() {
     <section className="py-20 px-4 pt-14">
       <div className="custom__container max-w-7xl mx-auto">
         <div className="flex items-center justify-between mb-12">
-          <h2 className="text-3xl font-bold text-gray-900">
-            {t("bestSeller")}
-          </h2>
+       <h2 className="text-3xl font-bold text-gray-900">
+         {value === "details" ? t("bestSeller") : t("bestSellerDetails")}
+       </h2>
+
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -51,7 +52,7 @@ export default function BestSeller() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
             >
-              <ProductCard {...product} />
+              <ProductCard {...product}/>
             </motion.div>
           ))}
         </div>

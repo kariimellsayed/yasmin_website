@@ -1,9 +1,11 @@
 "use client";
+import React, { use } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Details from "../../components/Details";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import Reviews from "../../components/reviews";
 
 type Props = {
   params: {
@@ -11,9 +13,10 @@ type Props = {
   };
 };
 
-export default function ProductDetailsPage({ params }: Props) {
+export default function ProductDetailsPage(props: Props) {
+  const params = use(props.params);
   const t = useTranslations("ProductPage");
-  const tb = useTranslations("ContactPage.form.breadcrumb");
+  const tb = useTranslations("ContactPage.breadcrumb");
 
   return (
     <section className="py-16">
@@ -68,6 +71,7 @@ export default function ProductDetailsPage({ params }: Props) {
           transition={{ duration: 0.6 }}
         >
           <Details productId={params.productDetails} />
+          <Reviews />
         </motion.div>
       </div>
     </section>

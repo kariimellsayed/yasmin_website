@@ -3,7 +3,7 @@
 import Image from "next/image"
 import { useState, ReactNode } from "react"
 
-// أنواع البيانات
+
 type ProductListItem = {
   id: number;
   icon: ReactNode;
@@ -15,11 +15,17 @@ type ImageOfProduct = {
   img: string;
 };
 
-function Details() {
+type DetailsProps = {
+  productId: string;
+};
+
+
+function Details({productId}: DetailsProps) {
     const [isActive, setIsActive] =  useState<number>(1);
     const [imgeSrc, setImgSrc] =  useState<string | null>(null);
     const [rate, setRate] =  useState<number>(4)
     const [viewToggle, setViewToggle] = useState<boolean>(true);
+    
 
     const listOfProduct: ProductListItem[] = [
       {

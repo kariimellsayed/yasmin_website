@@ -27,6 +27,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   reviewCount,
   colors,
   isOnSale,
+
 }) => {
   const locale = useLocale();
   const t = useTranslations('Landing');
