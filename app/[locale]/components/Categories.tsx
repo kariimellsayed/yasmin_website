@@ -1,5 +1,4 @@
 "use client";
-import { useSearchParams } from "next/navigation";
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import { Heart, Star } from "lucide-react";
@@ -30,12 +29,17 @@ type Product = {
 type CartItem = Product & { qty: number };
 type Cart = { [productId: number]: CartItem };
 
-export default function Categories() {
+// Props interface
+interface CategoriesProps {
+  search: string;
+  category: string;
+}
+
+export default function Categories({ search, category }: CategoriesProps) {
   const t = useTranslations("ContactPage.form");
   const tProd = useTranslations("ProductPage");
-  const searchParams = useSearchParams();
-  const search = (searchParams.get("search") as string) || "";
-  const [selected, setSelected] = useState<number>(0);
+
+  const [selected, setSelected] = useState<number>(Number(category) || 0);
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
   const [visibleCount, setVisibleCount] = useState<number>(8);
   const loaderRef = useRef<HTMLDivElement | null>(null);

@@ -1,6 +1,8 @@
+import { useTranslations } from 'next-intl'
 import React from 'react'
 
 function contactUs() {
+  const t = useTranslations("ContactPage")
   return (
     <div className="grid md:grid-cols-2 gap-8">
           {/* Contact Info */}

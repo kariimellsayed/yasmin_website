@@ -1,5 +1,5 @@
 "use client";
-import React, { use } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Details from "../../components/Details";
@@ -14,7 +14,6 @@ type Props = {
 };
 
 export default function ProductDetailsPage(props: Props) {
-  const params = use(props.params);
   const t = useTranslations("ProductPage");
   const tb = useTranslations("ContactPage.breadcrumb");
 
@@ -61,7 +60,7 @@ export default function ProductDetailsPage(props: Props) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          {t("productDetails")} - {params.productDetails}
+          {t("productDetails")} - {props.params.productDetails}
         </motion.h2>
 
         {/* Product details section with animation */}
@@ -70,7 +69,7 @@ export default function ProductDetailsPage(props: Props) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <Details productId={params.productDetails} />
+          <Details productId={props.params.productDetails} />
           <Reviews />
         </motion.div>
       </div>
