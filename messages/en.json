@@ -130,13 +130,23 @@
       "weekend": "Saturday - Sunday"
     }
   },
-  "Footer": {
-    "aboutUs": "About the Store",
-    "contactUs": "Contact Us",
+"Footer": {
+    "shop": "Shop",
+    "description": "Our store offers you the finest cosmetics and high-quality perfumes that give you a radiant look and complete confidence. We are committed to providing carefully selected products to meet all your daily needs and exceed your expectations.",
+    "customerService": "Customer Service",
+    "followUs": "Follow us",
+    "viewTrends": "View the latest makeup trends and tips!",
+    "eye": "Eye",
+    "face": "Face",
+    "body": "Body",
+    "lips": "Lips",
+    "perfume": "Perfume",
+    "about": "About",
+    "contact": "Contact",
     "privacyPolicy": "Privacy Policy",
-    "termsOfService": "Terms of Service",
-    "followUs": "Follow Us",
-    "subscribeNewsletter": "Subscribe to Newsletter"
+    "refundPolicy": "Refund Policy",
+    "shippingPolicy": "Shipping Policy",
+    "copyright": "© Yasmin Magdy 2025 | All Rights Reserved."
   },
   "breadcrumb": {
     "home": "Home",

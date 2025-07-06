@@ -107,12 +107,12 @@ export default function Reviews() {
       </div>
     </motion.section>
     <motion.div>
-        <div className="w-[75%] m-auto">
+        <div className="m-auto lg:w-[75%] w-full">
             <h2 className="text-[#393939] text-3xl font-medium text-center mb-4">Write your Review</h2>
-            <div className="px-9 py-2 bg-white h-16 flex items-center">
-                <p className="text-[#868686] flex basis-[35%]">What do you think about this product ? </p>
-                <button className="rounded-sm cursor-pointer text-[#393939] bg-[#FE93B9] h-14 px-9 py-2 basis-[65%]">Write A Review</button>
-                </div>
+            <div className="px-9 py-2 bg-white h-auto lg:h-16 lg:gap-0 gap-4 flex items-center lg:flex-rwo flex-col">
+                <p className="text-[#868686] flex lg:basis-[35%] basis-full">What do you think about this product ? </p>
+                <button className="rounded-sm cursor-pointer text-[#393939] bg-[#FE93B9] h-14 px-9 py-2 lg:basis-[65%] basis-full">Write A Review</button>
+            </div>
         </div>
     </motion.div>
     <motion.section>

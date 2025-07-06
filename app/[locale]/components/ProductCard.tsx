@@ -79,7 +79,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
 
         {/* Hover View Details Button */}
         <Link
-          href={`/${locale}/product/${id}`}
+          href={`/${locale}/products/${id}`}
           className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300"
         >
           <span className="text-white bg-[#FE93B9] px-4 py-2 rounded-full text-sm font-medium shadow-lg">

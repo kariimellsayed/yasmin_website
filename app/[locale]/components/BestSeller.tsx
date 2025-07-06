@@ -35,7 +35,7 @@ export default function BestSeller(value = '' as any) {
   }, [visibleProducts]);
 
   return (
-    <section className="py-20 px-4 pt-14">
+    <section className="py-20 pt-14">
       <div className="custom__container max-w-7xl mx-auto">
         <div className="flex items-center justify-between mb-12">
        <h2 className="text-3xl font-bold text-gray-900">
@@ -44,7 +44,7 @@ export default function BestSeller(value = '' as any) {
 
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6">
           {allProducts.slice(0, visibleProducts).map((product) => (
             <motion.div
               key={product.id}
