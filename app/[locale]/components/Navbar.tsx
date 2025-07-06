@@ -191,7 +191,7 @@ export default function Navbar() {
           whileTap={{ scale: 0.95 }}
           
         >
-          <SwitchButtonLang currentLocale={locale} />
+          <SwitchButtonLang currentLocale={locale as "en" | "ar"} />
         </motion.div>
       </div>
     </>
