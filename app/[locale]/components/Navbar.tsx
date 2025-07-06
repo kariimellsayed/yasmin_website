@@ -42,7 +42,7 @@ export default function Navbar() {
       items: [
         { key: "home", path: "/", icon: <FiHome size={20} />, activeIcon: <FiHome size={20} className="text-white" /> },
         { key: "products", path: "/products", icon: <FiBox size={20} />, activeIcon: <FiBox size={20} className="text-white" /> },
-        { key: "contact", path: "/Contact", icon: <FiMail size={20} />, activeIcon: <FiMail size={20} className="text-white" /> }
+        { key: "contact", path: "/contact", icon: <FiMail size={20} />, activeIcon: <FiMail size={20} className="text-white" /> }
       ]
     },
     {

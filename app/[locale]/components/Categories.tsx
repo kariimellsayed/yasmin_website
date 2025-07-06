@@ -154,7 +154,7 @@ export default function Categories({ search, category }: CategoriesProps) {
               </span>
             )}
             <div className="relative bg-white rounded-t-xl p-6 h-80 mb-2.5 overflow-hidden">
-              <Link href={`/Products/${product.id}`} className="block h-full">
+              <Link href={`/products/${product.id}`} className="block h-full">
                 <img
                   src={product.image}
                   alt={product.name}

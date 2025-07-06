@@ -7,13 +7,21 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import Reviews from "../../components/reviews";
 
+
+const metadata = {
+  title: "Products",
+};
+
 type Props = {
-  params: {
+  params: Promise<{
     productDetails: string;
-  };
+  }>;
 };
 
 export default function ProductDetailsPage(props: Props) {
+  // نفك الـ Promise
+  const params = React.use(props.params);
+
   const t = useTranslations("ProductPage");
   const tb = useTranslations("ContactPage.breadcrumb");
 
@@ -26,7 +34,7 @@ export default function ProductDetailsPage(props: Props) {
             href="/"
             className="text-[#868686] hover:text-[#FE93B9] transition duration-200"
           >
-            {tb("home")}
+            {t("home")}
           </Link>
           <Image
             src="/arrow-right.svg"
@@ -36,10 +44,10 @@ export default function ProductDetailsPage(props: Props) {
             className="rtl:rotate-180"
           />
           <Link
-            href="/Products"
+            href="/products"
             className="text-[#868686] hover:text-[#FE93B9] transition duration-200"
           >
-            {tb("contact")}
+            {t("title")}
           </Link>
           <Image
             src="/arrow-right.svg"
@@ -60,7 +68,7 @@ export default function ProductDetailsPage(props: Props) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          {t("productDetails")} - {props.params.productDetails}
+          {t("productDetails")} - {params.productDetails}
         </motion.h2>
 
         {/* Product details section with animation */}
@@ -69,7 +77,7 @@ export default function ProductDetailsPage(props: Props) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <Details productId={props.params.productDetails} />
+          <Details productId={params.productDetails} />
           <Reviews />
         </motion.div>
       </div>

@@ -5,6 +5,9 @@ import Link from "next/link";
 import Categories from "../components/Categories";
 import { useTranslations } from "next-intl";
 
+
+
+
 export default function ProductsPage() {
   const t = useTranslations("ProductPage");
   const tCommon = useTranslations("Navbar");
@@ -26,7 +29,7 @@ export default function ProductsPage() {
             width={24}
             height={24}
           />
-          <div className="font-semibold text-[#FE93B9]">{t("title")}</div>
+          <div className="font-semibold text-[#393939]">{t("title")}</div>
         </div>
 
         {/* Categories + Filtered Products */}

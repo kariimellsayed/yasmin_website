@@ -30,7 +30,8 @@
     "wishlist": " Add to Wishlist"
   },
   "ProductPage": {
-    "title": "Product Details",
+    "title": "Categories",
+    "home": "Home",
     "addToCart": "Add to Cart",
     "buyNow": "Buy Now",
     "productDetails": "Product Details",
@@ -159,5 +160,17 @@
     "profile": "Profile",
     "login": "Login",
     "register": "Register"
+  },
+  "Activity": {
+    "links": {
+    "Home": "Home",
+    "Help": "Help"
+    }
+  },
+  "Privacy": {
+  "links": {
+  "Home": "Home",
+  "Priv": "Privacy"
+  }
   }
 }

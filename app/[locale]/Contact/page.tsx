@@ -15,13 +15,13 @@ export default function ContactPage() {
   return (
     <section className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 transition-all duration-300">
       {/* ✅ Breadcrumb */}
-      <div className="flex items-center gap-2 mb-8 text-[#393939] text-sm md:text-base">
+    <div className="flex items-center gap-2 mb-8 text-[#393939] text-sm md:text-base">
         <Link href="/" className="text-[#868686] hover:underline transition-all">
           {t("breadcrumb.home")}
         </Link>
         <Image src="/arrow-right.svg" alt="Arrow Right" width={20} height={20} />
         <span className="font-semibold text-[#393939]">{t("breadcrumb.contact")}</span>
-      </div>
+      </div>  
 
       {/* ✅ Heading */}
       <h1 className="text-3xl font-bold text-center mb-4 animate-fade-in">{t("title")}</h1>
